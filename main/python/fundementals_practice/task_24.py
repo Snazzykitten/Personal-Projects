@@ -1,7 +1,10 @@
 """ Countdown enter """
 
 # Asking for input
-num1 = int(input(Enter a number: ))
+loops = int(input("Enter a number: "))
 
 # Preforming logic
-if is_p 
+for loop in range(loops):
+    key_pressed = input("")
+    if key_pressed == "":
+        print(loops - loop)
