@@ -5,11 +5,14 @@ num1 = int(input("Enter a number: "))
 
 # Defining a empty list to store
 numbers = []
-a = 0
 
 # Looping
-for i in range(0, num1):
-    numbers.append(i+1)
-
+for i in range(1, num1 + 1):
+    numbers.append(i)
+    
+print(numbers)
+ans = numbers.index(2)
 #print(list)
-print(sum(numbers))
+for num in range(1, num1):
+    ans = (ans * numbers.index(num))
+    print(ans)
