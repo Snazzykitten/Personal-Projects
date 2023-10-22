@@ -6,10 +6,10 @@
 # ---------------------------
 # Subprograms
 # ---------------------------
-def energy_cost(previous_meter_reading, current_meter_reading, calorific_value):
+def energy_cost(input_previous_meter_reading, input_current_meter_reading, input_calorific_value):
     """ Calculates energy bill, returns the cost """
-    units_used = current_meter_reading - previous_meter_reading
-    kilowatt_hours = units_used * 1.022 * (calorific_value / 3.6)
+    units_used = input_current_meter_reading - input_previous_meter_reading
+    kilowatt_hours = units_used * 1.022 * (input_calorific_value / 3.6)
     cost = 0.0284 * kilowatt_hours
     return cost
 
