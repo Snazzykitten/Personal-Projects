@@ -6,6 +6,9 @@
 # Style functions to rizz up the tty
 # =========================================================
 
+# Importing libraries
+import os
+
 # A list containing ASCI escape sequences
 ansi_colors = [
     '\033[0m',  # 0 - reset
@@ -44,7 +47,7 @@ ansi_colors = [
 
 # A list that converts the ASCI escape sequnces into a
 # labled pairs, similar to a dictionary. It references the
-# above list for the sake of simplicity to read.
+# above list for the sake of simplicity.
 colors_dict = [
     "reset", str(ansi_colors[0]),
     "bold", str(ansi_colors[1]),
@@ -95,11 +98,16 @@ def pprint(color, txt, style = "reset", query = False):
         return temp
     else:
         print(style, color, txt)
-    
+
+def clear(os = "unix"):
+    if os == "unix":
+        os.system("Clear")
+
 # =========================================================
 # Testing
 # =========================================================
 
+clear()
 pprint("fg.blue", "What is yo name?", "bold", query=True)
 
 #var = pprint("fg.red", "Hello World",style="reset",query=True)
